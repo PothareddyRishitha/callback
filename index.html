@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //      Simulate a pizza delivery system with steps:
+    //  1)Place order → Prepare pizza → Bake pizza → Pack pizza → Deliver pizza.
+function placeorder(callback){
+setTimeout(()=>{
+console.log("place order")
+callback()
+},1000)
+}
+function preparepizza(callback){
+setTimeout(()=>{
+console.log("Prepare pizza")
+callback()
+},2000)
+}
+function Bakepizza(callback){
+setTimeout(()=>{
+console.log("Bake pizza")
+callback()
+},3000)
+}
+function Packpizza(callback){
+setTimeout(()=>{
+console.log("Pack pizza")
+callback()
+},4000)
+}
+function Deliverpizza(callback){
+setTimeout(()=>{
+console.log("Deliver pizza.")
+callback()
+},5000)
+}
+placeorder(()=>{
+    preparepizza(()=>{
+        Bakepizza(()=>{
+            Packpizza(()=>{
+                Deliverpizza(()=>{
+
+                })
+            })
+        })
+    })
+})
+
+    </script>
+</body>
+</html>
